@@ -993,7 +993,7 @@ void level7(Player* player, Object objects[], Enemy enemies[], int num_objects, 
 					DrawTextureRec(platform, { 0, randoms[i], objects[i].rect.width, objects[i].rect.height }, { objects[i].rect.x, objects[i].rect.y }, objects[i].color);
 			bool all_dead = true;
 			for (int i = 0; i < 20; i++) {
-				if ((enemies + i)->x > SCREEN_WIDTH - 10 || (enemies + i)->x < 10 || (enemies + i)->y > SCREEN_HEIGHT - 10 || (enemies + i)->y < 10) {
+				if ((enemies + i)->x > SCREEN_WIDTH || (enemies + i)->x < 5 || (enemies + i)->y > SCREEN_HEIGHT || (enemies + i)->y < 10) {
 					(enemies + i)->alive = false;
 				}
 				if ((enemies + i)->alive) {
